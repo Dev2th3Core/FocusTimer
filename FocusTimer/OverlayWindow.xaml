@@ -12,7 +12,7 @@
     <Grid>
         <!-- Full-screen semi-transparent black background to cover the work area (excludes taskbar) -->
         <!-- Make it non-hit-testable so clicks pass through to underlying apps -->
-        <Rectangle Fill="#A0000000" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsHitTestVisible="False"/>
+        <Rectangle x:Name="BackgroundRect" Fill="#A0000000" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsHitTestVisible="False"/>
 
         <!-- Centered timer text (also non-hit-testable so clicks pass through) -->
         <TextBlock x:Name="TimerText"

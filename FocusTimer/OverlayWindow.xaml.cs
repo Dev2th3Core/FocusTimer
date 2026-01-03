@@ -3,6 +3,7 @@ using System.Runtime.InteropServices;
 using System.Windows;
 using System.Windows.Interop;
 using System.Windows.Threading;
+using System.Windows.Media;
 
 namespace FocusTimer
 {
@@ -42,7 +43,7 @@ namespace FocusTimer
             if (timeLeft.TotalSeconds <= 0)
             {
                 timer.Stop();
-                TimerText.Text = "TIME UP!!!";
+                TimerText.Text = "TIME UP";
                 return;
             }
 
@@ -98,6 +99,75 @@ namespace FocusTimer
 
         // Expose paused state
         public bool IsPaused => isPaused;
+
+        // Allow changing the overlay background brush
+        public void SetBackgroundColor(Brush brush)
+        {
+            if (BackgroundRect != null)
+                BackgroundRect.Fill = brush;
+        }
+
+        // Allow changing the timer text brush
+        public void SetTimerColor(Brush brush)
+        {
+            if (TimerText != null)
+                TimerText.Foreground = brush;
+        }
+
+        // Position the TimerText based on selection
+        public void SetTimerPosition(string position)
+        {
+            switch ((position ?? "").ToLowerInvariant())
+            {
+                case "top":
+                    TimerText.HorizontalAlignment = HorizontalAlignment.Center;
+                    TimerText.VerticalAlignment = VerticalAlignment.Top;
+                    break;
+                case "bottom":
+                    TimerText.HorizontalAlignment = HorizontalAlignment.Center;
+                    TimerText.VerticalAlignment = VerticalAlignment.Bottom;
+                    break;
+                case "left":
+                    TimerText.HorizontalAlignment = HorizontalAlignment.Left;
+                    TimerText.VerticalAlignment = VerticalAlignment.Center;
+                    break;
+                case "right":
+                    TimerText.HorizontalAlignment = HorizontalAlignment.Right;
+                    TimerText.VerticalAlignment = VerticalAlignment.Center;
+                    break;
+                case "top-left":
+                case "topleft":
+                    TimerText.HorizontalAlignment = HorizontalAlignment.Left;
+                    TimerText.VerticalAlignment = VerticalAlignment.Top;
+                    break;
+                case "top-right":
+                case "topright":
+                    TimerText.HorizontalAlignment = HorizontalAlignment.Right;
+                    TimerText.VerticalAlignment = VerticalAlignment.Top;
+                    break;
+                case "bottom-left":
+                case "bottomleft":
+                    TimerText.HorizontalAlignment = HorizontalAlignment.Left;
+                    TimerText.VerticalAlignment = VerticalAlignment.Bottom;
+                    break;
+                case "bottom-right":
+                case "bottomright":
+                    TimerText.HorizontalAlignment = HorizontalAlignment.Right;
+                    TimerText.VerticalAlignment = VerticalAlignment.Bottom;
+                    break;
+                default:
+                    TimerText.HorizontalAlignment = HorizontalAlignment.Center;
+                    TimerText.VerticalAlignment = VerticalAlignment.Center;
+                    break;
+            }
+        }
+
+        // Allow changing the timer font size
+        public void SetTimerFontSize(double size)
+        {
+            if (TimerText != null && size > 0)
+                TimerText.FontSize = size;
+        }
 
         private void SetWindowToWorkArea()
         {

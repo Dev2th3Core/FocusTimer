@@ -102,7 +102,7 @@ export default function Home() {
                   Track Your Focus Without a Second Screen
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Inspired by productivity setups that use separate timer devices — Focus Timer brings your focus clock directly onto your working screen.
+                  Inspired by productivity setups that rely on separate timer devices, Focus Timer brings your focus clock straight to your working screen.                
                 </p>
               </div>
 

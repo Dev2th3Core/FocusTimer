@@ -39,6 +39,12 @@ namespace FocusTimer.Avalonia
         {
             SetWindowToWorkArea();
             WindowTransparencyHelper.MakeTransparent(this);
+
+            // Add padding to the main container to prevent text from touching screen edges
+            var bgRect = this.FindControl<Border>("BackgroundRect");
+            if (bgRect != null) {
+                bgRect.Padding = new Thickness(20);
+            }
         }
 
         private void Timer_Tick(object? sender, EventArgs e)

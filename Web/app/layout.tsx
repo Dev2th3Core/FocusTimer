@@ -13,16 +13,25 @@ export const metadata: Metadata = {
   // TODO: Replace with your actual domain when you deploy
   metadataBase: new URL('https://focustimer.dev2th3core.site'),
 
-  title: 'Focus Timer - The Always-On-Top Timer for Windows',
-  description: 'A lightweight, customizable timer overlay that floats above any application. Keep your focus clock directly on your screen. Free and open source.',
-  keywords: ['focus timer', 'pomodoro', 'desktop timer', 'overlay timer', 'productivity app', 'windows app', 'focus app', 'open source'],
+  title: 'Focus Timer App – Always-On-Top Desktop Timer for Windows',
+  description: 'Focus Timer is a lightweight desktop productivity app that keeps your timer always on top while you work. Customize colors, place it anywhere, and stay focused without a second screen.',
+  keywords: [
+    'focus timer',
+    'desktop timer',
+    'always on top timer',
+    'overlay timer',
+    'productivity app',
+    'windows focus app',
+    'pomodoro alternative',
+    'open source timer',
+  ],
   authors: [{ name: 'dev2th3core', url: 'https://github.com/dev2th3core' }],
   creator: 'dev2th3core',
 
   // Open Graph (for social sharing on Facebook, LinkedIn, etc.)
   openGraph: {
-    title: 'Focus Timer - The Always-On-Top Timer for Windows',
-    description: 'A lightweight, customizable timer overlay that floats above any application.',
+    title: 'Focus Timer App – Always-On-Top Desktop Timer for Windows',
+    description: 'A desktop focus timer that floats above your apps. Always on top, position anywhere, custom colors. Free and open source.',
     // TODO: Replace with your actual domain
     url: 'https://focustimer.dev2th3core.site',
     siteName: 'Focus Timer',
@@ -42,8 +51,8 @@ export const metadata: Metadata = {
   // Twitter Card (for sharing on X/Twitter)
   twitter: {
     card: 'summary_large_image',
-    title: 'Focus Timer - The Always-On-Top Timer for Windows',
-    description: 'A lightweight, customizable timer overlay that floats above any application.',
+    title: 'Focus Timer App – Always-On-Top Desktop Timer for Windows',
+    description: 'A desktop focus timer that stays visible while you work. Always on top. Position anywhere. Free Windows app.',
     // TODO: Add your Twitter handle if you have one
     creator: '@dev2th3core',
     images: ['/og-image.png'], // Twitter uses the same Open Graph image

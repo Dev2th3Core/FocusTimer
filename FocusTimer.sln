@@ -1,9 +1,8 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.36717.8 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FocusTimer", "FocusTimer\FocusTimer.csproj", "{8E8CFCDA-4964-42BF-9F9C-84530A590F68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FocusTimer", "FocusTimer\FocusTimer.csproj", "{1A9A72A7-7C50-449C-A033-A9E62439C04A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +10,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8E8CFCDA-4964-42BF-9F9C-84530A590F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E8CFCDA-4964-42BF-9F9C-84530A590F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E8CFCDA-4964-42BF-9F9C-84530A590F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E8CFCDA-4964-42BF-9F9C-84530A590F68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A9A72A7-7C50-449C-A033-A9E62439C04A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A9A72A7-7C50-449C-A033-A9E62439C04A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A9A72A7-7C50-449C-A033-A9E62439C04A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A9A72A7-7C50-449C-A033-A9E62439C04A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

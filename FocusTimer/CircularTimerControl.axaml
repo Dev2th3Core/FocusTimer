@@ -1,0 +1,28 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FocusTimer.Avalonia.CircularTimerControl">
+    
+    <Panel Name="Container" Width="250" Height="250" Background="Transparent"
+           PointerPressed="OnPointerPressed"
+           PointerMoved="OnPointerMoved"
+           PointerReleased="OnPointerReleased">
+        
+        <!-- Background Ring -->
+        <Ellipse Stroke="{DynamicResource InputBackgroundBrush}" StrokeThickness="8" Width="220" Height="220"/>
+        
+        <!-- Active Arc -->
+        <Path Name="ActiveArc" Stroke="#0078D7" StrokeThickness="8" StrokeLineCap="Round" Fill="Transparent"/>
+        
+        <!-- Knob -->
+        <Canvas Width="250" Height="250">
+            <Ellipse Name="Knob" Fill="{DynamicResource TextPrimaryBrush}" Width="24" Height="24" Margin="-12,-12,0,0"/>
+        </Canvas>
+        
+        <!-- Center Text -->
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Name="TimeText" Text="30" FontSize="48" FontWeight="Bold" Foreground="{DynamicResource TextPrimaryBrush}" HorizontalAlignment="Center"/>
+            <TextBlock Text="minutes" FontSize="14" Foreground="{DynamicResource TextSecondaryBrush}" HorizontalAlignment="Center"/>
+        </StackPanel>
+        
+    </Panel>
+</UserControl>

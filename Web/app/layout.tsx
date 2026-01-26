@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+import Script from "next/script"
 
 const geist = Geist({ 
   subsets: ["latin"],
@@ -73,6 +74,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=G-7RLQ02RGCP`}
+        strategy="afterInteractive"
+      />
+
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-7RLQ02RGCP');
+        `}
+      </Script>
+
       <body className={`${geist.variable} font-sans antialiased`}>
         {children}
         <Analytics />

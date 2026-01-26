@@ -65,6 +65,18 @@ export default function Home() {
     },
   ]
 
+  const handleDownload = () => {
+  if (typeof window !== "undefined" && (window as any).gtag) {
+    (window as any).gtag("event", "focus_timer_download", {
+      event_category: "engagement",
+      event_label: "windows_exe",
+    });
+  }
+
+  window.location.href = "/FocusTimer.exe";
+};
+
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-background via-background to-background overflow-hidden">
       {/* Navigation */}
@@ -77,11 +89,11 @@ export default function Home() {
             <span className="font-semibold text-lg">Focus Timer</span>
           </div>
           <div className="flex items-center gap-4">
-            <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700 text-white shadow-lg shadow-blue-600/20 transition-all hover:scale-105">
-              <a href="/FocusTimer.exe" download>
-                <Download className="w-4 h-4 mr-2" />
-                Download
-              </a>
+            <Button asChild size="sm" className="bg-blue-600 hover:bg-blue-700 cursor-pointer text-white shadow-lg shadow-blue-600/20 transition-all hover:scale-105" onClick={handleDownload}>
+                <span>
+                  <Download className="w-4 h-4 mr-2" />
+                  Download
+                </span>
             </Button>
           </div>
         </div>
@@ -107,11 +119,11 @@ export default function Home() {
               </div>
 
               <div className="space-y-4">
-                <Button asChild size="lg" className="text-base px-8 bg-blue-600 hover:bg-blue-700 text-white shadow-xl shadow-blue-600/20 transition-all hover:scale-105">
-                  <a href="/FocusTimer.exe" download>
-                    <Download className="w-5 h-5 mr-2" />
-                    Download for Windows
-                  </a>
+                <Button asChild size="lg" className="text-base cursor-pointer px-8 bg-blue-600 hover:bg-blue-700 text-white shadow-xl shadow-blue-600/20 transition-all hover:scale-105" onClick={handleDownload}>
+                    <span>
+                      <Download className="w-5 h-5 mr-2" />
+                      Download for Windows
+                    </span>
                 </Button>
                 <p className="text-sm text-muted-foreground">
                   Windows only • macOS & Linux coming soon
@@ -372,12 +384,12 @@ export default function Home() {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Start Your Focus Journey Today</h2>
             <p className="text-xl text-muted-foreground mb-10">Free • No signup • Lightweight • Open source</p>
-            <a href="/FocusTimer.exe" download>
-              <Button size="lg" className="gap-2 bg-blue-600 hover:bg-blue-700 text-white shadow-xl shadow-blue-600/20 transition-all hover:scale-105 cursor-pointer">
-                <Download className="w-5 h-5" />
-                Download Now
+              <Button size="lg" className="text-base cursor-pointer px-4 bg-blue-600 hover:bg-blue-700 text-white shadow-xl shadow-blue-600/20 transition-all hover:scale-105" onClick={handleDownload}>
+                <span className="flex items-center gap-2">
+                  <Download className="w-5 h-5" />
+                  Download Now
+                </span>
               </Button>
-            </a>
             <p className="text-sm text-muted-foreground mt-6">Windows • macOS & Linux coming soon</p>
           </div>
         </div>
